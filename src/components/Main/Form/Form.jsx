@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { TextField, Typography, Grid, Button, FormControl, InputLabel, Select, MenuItem } from '@mui/material'
 import { v4 as uuidv4 } from 'uuid';
-//import alanBtn from '@alan-ai/alan-sdk-web';
 
 import { ExpenseTrackerContext } from '../../../context/context'
 import { incomeCategories, expenseCategories } from '../../../constants/categories';
@@ -27,34 +26,6 @@ const Form = () => {
     }
     
     const selectedCategories = formData.type === 'Income' ? incomeCategories : expenseCategories;
-
-    // const ALAN_Key = `8d9e1496853de4b8f82e5f85e5ade1f72e956eca572e1d8b807a3e2338fdd0dc/stage`
-    
-    // useEffect(() => {
-    //     alanBtn({
-    //         key: ALAN_Key,
-            
-    //         onCommand: (commandData) => {
-                
-                
-    //             if(commandData.command === 'type'){
-    //                 const capitalizedData = commandData.data.charAt(0).toUpperCase() + commandData.data.slice(1);
-    //                 setFormData({...formData, type: capitalizedData})
-    //             }
-    //             if(commandData.command === 'category'){
-    //                 const capitalizedCategory = commandData.data.charAt(0).toUpperCase() + commandData.data.slice(1);
-    //                     setFormData({...formData, category: capitalizedCategory});
-    //             }
-    //             if(commandData.command === 'amount'){
-    //                 setFormData({...formData, amount: Number(commandData.data)})
-    //             }
-    //             if(commandData.command === 'date'){
-    //                 console.log(commandData.command)
-    //                 setFormData({...formData, date: commandData.command})
-    //             }
-    //         }
-    //     });
-    // }, []);
 
   return (
     <div>
